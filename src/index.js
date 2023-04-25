@@ -2,18 +2,18 @@
  * 分割代入
  */
 
-const myProfile = {
-  name: "kitatani",
-  age: 28
-};
+// const myProfile = {
+//   name: "kitatani",
+//   age: 28
+// };
 
-const message = `i am ${myProfile.name} and age is ${myProfile.age}`
-console.log(message)
+// const message = `i am ${myProfile.name} and age is ${myProfile.age}`
+// console.log(message)
 
 //オブジェクトの場合、中と一致していないと取得できない？
-const {name , age} = myProfile;
-const message2 = `i am ${name} and age is ${age}`
-console.log(message2)
+// const {name , age} = myProfile;
+// const message2 = `i am ${name} and age is ${age}`
+// console.log(message2)
 
 const myProfile = ["kitatani", 27];
 
@@ -24,3 +24,11 @@ console.log(message3)
 const [name, age] = myProfile
 const message4 = `i am ${name} and age is ${age}`
 console.log(message4)
+
+/**
+ * デフォルト値
+*/
+// nameの引数なしの場合、undefinedになる
+const sayHello = (name = "guest") => console.log(`hello, ${name}`)
+sayHello('Kitatani')
+
