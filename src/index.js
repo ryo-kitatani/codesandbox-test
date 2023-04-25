@@ -1,10 +1,26 @@
-import "./styles.css";
+/**
+ * 分割代入
+ */
 
-document.getElementById("app").innerHTML = `
-<h1>Hello Vanilla!</h1>
-<div>
-  We use the same configuration as Parcel to bundle this sandbox, you can find more
-  info about Parcel 
-  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
-</div>
-`;
+const myProfile = {
+  name: "kitatani",
+  age: 28
+};
+
+const message = `i am ${myProfile.name} and age is ${myProfile.age}`
+console.log(message)
+
+//オブジェクトの場合、中と一致していないと取得できない？
+const {name , age} = myProfile;
+const message2 = `i am ${name} and age is ${age}`
+console.log(message2)
+
+const myProfile = ["kitatani", 27];
+
+const message3 = `i am ${myProfile[0]} and age is ${myProfile[1]}`
+console.log(message3)
+
+// 配列は順番に渡される
+const [name, age] = myProfile
+const message4 = `i am ${name} and age is ${age}`
+console.log(message4)
