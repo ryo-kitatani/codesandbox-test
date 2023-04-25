@@ -55,3 +55,37 @@ console.log(arry6)
 
 const arry7 = [...arry4, ...arry5]
 console.log(arry7)
+
+
+/**
+ * map, filterを使った配列の処理
+ */
+
+const nameArry = ["田中","山田","北谷"];
+// for (let i = 0; i < nameArry.length; i++) {
+//   console.log(nameArry[i]);
+// }
+
+// const nameArry2 = nameArry.map((name) => {
+//   return name;
+// })
+// console.log(nameArry2)
+
+nameArry.map((name, index)=> console.log(index+1, name))
+
+const numArry = [1,2,3,4];
+const newArry = numArry.filter((num) => {
+  return num % 2 === 1
+})
+
+console.log(newArry)
+
+const newNameArray = nameArry.map((name)=> {
+  if(name === "北谷") {
+    return name
+  } else {
+    return `${name}さん`
+  }
+})
+
+console.log(newNameArray)
